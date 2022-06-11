@@ -1,38 +1,38 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/cdsamet_front/node_modules
-/cdsamet_front/.pnp
-/cdsamet_front/.pnp.js
+/cvsamet_front/node_modules
+/cvsamet_front/.pnp
+/cvsamet_front/.pnp.js
 
 # testing
-/cdsamet_front/coverage
+/cvsamet_front/coverage
 
 # next.js
-/cdsamet_front/.next/
-/cdsamet_front/out/
+/cvsamet_front/.next/
+/cvsamet_front/out/
 
 # production
-/cdsamet_front/build
+/cvsamet_front/build
 
 # misc
-/cdsamet_front/.DS_Store
-/cdsamet_front/*.pem
+/cvsamet_front/.DS_Store
+/cvsamet_front/*.pem
 
 # debug
-/cdsamet_front/npm-debug.log*
-/cdsamet_front/yarn-debug.log*
-/cdsamet_front/yarn-error.log*
-/cdsamet_front/.pnpm-debug.log*
+/cvsamet_front/npm-debug.log*
+/cvsamet_front/yarn-debug.log*
+/cvsamet_front/yarn-error.log*
+/cvsamet_front/.pnpm-debug.log*
 
 # local env files
-/cdsamet_front/.env*.local
+/cvsamet_front/.env*.local
 
 # vercel
-/cdsamet_front/.vercel
+/cvsamet_front/.vercel
 
 # typescript
-/cdsamet_front/*.tsbuildinfo
+/cvsamet_front/*.tsbuildinfo
 
 #.idea
 .idea

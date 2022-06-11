@@ -1,0 +1,30 @@
+.headerSection {
+  height: 50vh;
+  border: black 1px solid;
+  background-image: url("../../assets/background/Background_hero.jpg") !important;
+  background-position: center;
+  background-size: cover;
+  p {
+    color: $primaryTypoColor;
+  }
+  &__cvAndMailInfoSection {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__cvAndMailInfo {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    &__icon {
+      margin-right: 10px;
+      color: $primaryTypoColor;
+    }
+  }
+
+  &__mainHeader {
+    &__images {
+      width: 50px;
+      height: auto;
+    }
+  }
+}

@@ -1,7 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../common/styles/Home.module.scss'
 import Main from "./main";
 
 const Home: NextPage = () => {

@@ -1,16 +1,43 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import "utils/variables.scss";
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $firstTypo;
+}
+
+// Hide scrollbar
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari*/
+  }
+  h1{
+    font-size:clamp(1.6rem, 1.4200rem + 0.9000vw, 2.5rem)
+  }
+  h3{
+    font-size:clamp(1rem, 0.8615rem + 0.6154vw, 1.6rem)
+  }
+  h6{
+    font-size:clamp(0.8rem, 0.7077rem + 0.4103vw, 1.2rem)
+  }
+  p{
+    font-size:clamp(0.9rem, 0.8308rem + 0.3077vw, 1.2rem)
+  }
+  li{
+    font-size:clamp(0.9rem, 0.8308rem + 0.3077vw, 1.2rem)
+  }
+  label,body input,body textarea{
+    font-size:clamp(0.9rem, 0.8308rem + 0.3077vw, 1.2rem)
+  }
+  #submit,body .card-text-little{
+    font-size:clamp(0.8rem, 0.7769rem + 0.1026vw, 0.9rem)
+  }
+  .progressvalue{
+    font-size:clamp(0.6rem, 0.5538rem + 0.2051vw, 0.8rem)
+  }
 }
