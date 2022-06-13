@@ -9,8 +9,8 @@
     padding: 0 15%;
   }
   &__button {
+    cursor: pointer;
     font-size:clamp(0.9rem, 0.8308rem + 0.3077vw, 1.2rem);
-    color: darken(white, 25%);
     text-decoration: none;
     &:hover {
       color: white;
