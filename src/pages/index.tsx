@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Main from "./main";
+import Header from "../common/components/elements/header/header";
+import React from "react";
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +12,7 @@ const Home: NextPage = () => {
         <meta name="author" content="Samet BULUT" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Main />
+        <Header />
     </div>
   )
 }
