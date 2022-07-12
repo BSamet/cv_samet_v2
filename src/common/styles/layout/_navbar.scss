@@ -2,11 +2,34 @@
   height: 65px;
   background-color: rgba(0, 0, 0, .9);
   border-top: #036f7b 5px solid;
+  &__minNav{
+    display: none;
+    Button {
+      border: 1px solid #999999;
+      color: #999999;
+      &:hover {
+        border-color: white;
+        color: white;
+      }
+    }
+  }
   &__nav {
     width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 0 15%;
+  }
+  &__navDrawer {
+    background-color: rgba(0, 0, 0, .9);
+    color: #999999;
+    &__button {
+      &:hover {
+        color: white;
+      }
+      &Icon {
+        color: white;
+      }
+    }
   }
   &__button {
     cursor: pointer;
@@ -14,6 +37,15 @@
     text-decoration: none;
     &:hover {
       color: white;
+    }
+  }
+
+  @include tablet-only {
+    &__normalNav{
+      display: none;
+    }
+    &__minNav{
+      display: flex;
     }
   }
 }
