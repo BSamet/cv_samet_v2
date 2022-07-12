@@ -10,7 +10,6 @@ const Home: NextPage = () => {
         <title>Samet Bulut</title>
         <meta name="description" content="CV de Samet BULUT" />
         <meta name="author" content="Samet BULUT" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
         <Header />
     </div>

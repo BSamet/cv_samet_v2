@@ -14,6 +14,7 @@
     color: $primaryTypoColor;
   }
   &__cvAndMailInfoSection {
+    height: 20%;
     display: flex;
     justify-content: flex-end;
   }
@@ -28,6 +29,7 @@
   }
 
   &__mainHeader {
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,19 +50,48 @@
       -o-transition: all .5s ease-in-out;
       transition: all .5s ease-in-out;
       &:hover {
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        transform: scale(1.2);
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
         z-index: 1000;
       }
     }
     h1 {
       color: #036f7b;
-      margin-top: 25px;
+      margin-top: 15px;
     }
     p {
-      margin-top: 20px;
+      margin-top: 15px;
+    }
+  }
+
+  @include desktops-only {
+    height: 350px;
+  }
+
+  @include tablet-only {
+    height: 100vh;
+  }
+
+  @include tablet-paysage-only {
+    height: 100vh;
+    &__cvAndMailInfoSection {
+      justify-content: center;
+    }
+  }
+
+  @include mobile-paysage-only {
+    height: 350px;
+  }
+
+  @include mobile-only {
+    height: 350px;
+    &__cvAndMailInfoSection {
+      flex-direction: column;
+    }
+    &__cvAndMailInfo {
+      justify-content: center;
     }
   }
 }
