@@ -44,7 +44,6 @@ export const navbarData = [
 
 const Navbar = () => {
     const [navLocation, setNavLocation] = useState('');
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [state, setState] = React.useState({
         bottom: false,
     });
@@ -74,8 +73,8 @@ const Navbar = () => {
         >
             <List className={styles.navbar__navDrawer}>
                 {navbarData.map((pages, index) => (
-                    <>
-                        <ListItem key={index} disablePadding>
+                    <div key={index}>
+                        <ListItem disablePadding>
                             <ListItemButton className={styles.navbar__navDrawer__button}>
                                 <ListItemIcon>
                                     <pages.icon className={styles.navbar__navDrawer__buttonIcon}/>
@@ -84,7 +83,7 @@ const Navbar = () => {
                             </ListItemButton>
                         </ListItem>
                         <Divider style={{ background: 'white' }} variant="middle"/>
-                    </>
+                    </div>
                 ))}
             </List>
         </Box>
@@ -98,8 +97,7 @@ const Navbar = () => {
         >
             <Toolbar className={styles.navbar__normalNav}>
                 <nav className={styles.navbar__nav}>
-                    {navbarData.map((nav, index) => {
-                        return (
+                    {navbarData.map((nav, index) => (
                             <Link
                                 key={index}
                                 className={styles.navbar__button}
@@ -108,8 +106,7 @@ const Navbar = () => {
                             >
                                 {nav.title}
                             </Link>
-                        )
-                    })}
+                    ))}
                 </nav>
             </Toolbar>
 

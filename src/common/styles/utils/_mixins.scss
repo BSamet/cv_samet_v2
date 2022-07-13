@@ -24,13 +24,13 @@ $breakpoints: (
 }
 
 @mixin tablet-paysage-only {
-  @media screen and (min-height: 500px) and (max-width: 992px) {
+  @media screen and (max-width: 992px) {
     @content;
   }
 }
 
 @mixin mobile-paysage-only {
-  @media screen and (min-height: 500px) and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }

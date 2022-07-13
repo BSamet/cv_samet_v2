@@ -48,4 +48,12 @@
       display: flex;
     }
   }
+
+  @include tablet-paysage-only {
+    &__nav {
+      padding: 0;
+      justify-content: space-between;
+
+    }
+  }
 }
