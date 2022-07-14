@@ -1,0 +1,45 @@
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  &__header {
+    padding: 0.5% 0;
+    h1, h6 {
+      padding: 2% 0;
+    }
+    h1 {
+      color: $primaryColor;
+    }
+    h6 {
+      font-weight: normal;
+    }
+  }
+  &__divider {
+    border-bottom-width: 0.5px;
+    background-color: #000000;
+    width: 95%;
+    height: 50%;
+  }
+  &__description {
+    padding: 0 2%;
+    >p {
+      padding: 1% 0;
+      line-height: 2;
+    }
+    &__button {
+      margin-top: 30px;
+      background-color: $primaryColor;
+      text-transform: lowercase;
+      border-radius: 10px;
+      span {
+        text-transform: uppercase;
+      }
+      &:hover{
+        background-color: darken($primaryColor, 10%);
+      }
+    }
+  }
+}

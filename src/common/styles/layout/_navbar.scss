@@ -1,7 +1,7 @@
 .navbar {
   height: 65px;
   background-color: rgba(0, 0, 0, .9);
-  border-top: #036f7b 5px solid;
+  border-top: $primaryColor 5px solid;
   &__minNav{
     display: none;
     Button {
