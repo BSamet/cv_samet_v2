@@ -41,7 +41,7 @@
       height: auto;
       border: double 4px transparent;
       border-radius: 50%;
-      background-image: linear-gradient(white,  white), radial-gradient(circle at top left,  white,  #036f7b);
+      background-image: linear-gradient(white,  white), radial-gradient(circle at top left,  white,  $primaryColor);
       background-origin: border-box;
       background-clip: content-box, border-box;
       -webkit-transition: all .5s ease-in-out;

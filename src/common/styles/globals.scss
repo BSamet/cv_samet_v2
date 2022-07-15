@@ -11,10 +11,9 @@
 
 // Hide scrollbar
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
   &::-webkit-scrollbar {
-    display: none; /* Chrome, Safari*/
+    display: none;
   }
   h1{
     font-size:clamp(1.6rem, 1.4200rem + 0.9000vw, 2.5rem)
@@ -31,13 +30,13 @@ body {
   li{
     font-size:clamp(0.9rem, 0.8308rem + 0.3077vw, 1.2rem)
   }
-  label,body input,body textarea{
+  label, input, textarea{
     font-size:clamp(0.9rem, 0.8308rem + 0.3077vw, 1.2rem)
   }
-  #submit,body .card-text-little{
+  #submit, .card-text-little, span{
     font-size:clamp(0.8rem, 0.7769rem + 0.1026vw, 0.9rem)
   }
-  .progressvalue{
+  .progressvalue {
     font-size:clamp(0.6rem, 0.5538rem + 0.2051vw, 0.8rem)
   }
 }

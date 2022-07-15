@@ -43,7 +43,7 @@ export const navbarData = [
 ]
 
 const Navbar = () => {
-    const [navLocation, setNavLocation] = useState('');
+    const [navLocation, setNavLocation] = useState('Accueil');
     const [state, setState] = React.useState({
         bottom: false,
     });
@@ -75,7 +75,11 @@ const Navbar = () => {
                 {navbarData.map((pages, index) => (
                     <div key={index}>
                         <ListItem disablePadding>
-                            <ListItemButton className={styles.navbar__navDrawer__button}>
+                            <ListItemButton
+                                onClick={() => setNavigation(pages.title)}
+                                sx={pages.title === navLocation ? {color: "#ffffff"} : {color: "#999999"}}
+                                className={styles.navbar__navDrawer__button}
+                            >
                                 <ListItemIcon>
                                     <pages.icon className={styles.navbar__navDrawer__buttonIcon}/>
                                 </ListItemIcon>

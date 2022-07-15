@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header from "../common/components/elements/header/header";
 import React from "react";
 import AboutMe from "../common/components/elements/aboutMe/aboutMe";
+import WorkExperiences from "../common/components/elements/workExperiences/workExperiences";
 
 const Home: NextPage = () => {
   return (
@@ -12,8 +13,8 @@ const Home: NextPage = () => {
         <meta name="description" content="CV de Samet BULUT" />
         <meta name="author" content="Samet BULUT" />
       </Head>
-        <Header />
         <AboutMe />
+        <WorkExperiences />
     </section>
   )
 }

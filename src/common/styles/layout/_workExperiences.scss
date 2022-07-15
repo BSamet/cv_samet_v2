@@ -1,0 +1,19 @@
+.workExperiences {
+  margin-top: 1%;
+  @include baseComponent;
+  &__header {
+    @include colorTitle;
+  }
+
+  &__divider {
+    @include divider;
+  }
+
+  &__description {
+    width: 95%;
+    >div >div {
+      line-height: 1.5;
+      padding: 1% 0;
+    }
+  }
+}
