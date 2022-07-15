@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from "../../../styles/Home.module.scss";
 import {Divider} from "@mui/material";
-import WorkExperiences, {workExperiencesData} from "../workExperiences/workExperiences";
 
 export const schoolingData = [
     {

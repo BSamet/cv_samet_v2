@@ -1,0 +1,17 @@
+.language {
+  width: 100%;
+  margin-top: 1%;
+  &__header {
+    @include colorTitle();
+  }
+  &__divider {
+    border-bottom-width: 0.5px;
+    background-color: #000000;
+  }
+  &__description {
+    &__level {
+      width: 100%;
+      text-align: end;
+    }
+  }
+}

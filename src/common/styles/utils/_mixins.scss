@@ -51,32 +51,17 @@ $breakpoints: (
   width: 100%;
 }
 
-@mixin colorTitle {
+@mixin colorTitle($color: $primaryColor) {
   padding: 0.5% 0;
   h1 {
-    color: $primaryColor;
+    color: $color;
     padding: 2% 0;
   }
 }
 
-@mixin whiteTitle {
-  padding: 0.5% 0;
-  h1 {
-    color: #f1f1f1;
-    padding: 2% 0;
-  }
-}
-
-@mixin divider {
+@mixin divider($color: #000000) {
   border-bottom-width: 0.5px;
-  background-color: #000000;
-  width: 95%;
-  height: 50%;
-}
-
-@mixin whiteDivider {
-  border-bottom-width: 0.5px;
-  background-color: #f1f1f1;
+  background-color: $color;
   width: 95%;
   height: 50%;
 }

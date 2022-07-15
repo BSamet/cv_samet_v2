@@ -1,11 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Header from "../common/components/elements/header/header";
 import React from "react";
 import AboutMe from "../common/components/elements/aboutMe/aboutMe";
 import WorkExperiences from "../common/components/elements/workExperiences/workExperiences";
 import Schooling from "../common/components/elements/schooling/schooling";
-import {Divider} from "@mui/material";
+import Language from "../common/components/elements/language/language";
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +17,10 @@ const Home: NextPage = () => {
         <AboutMe />
         <WorkExperiences />
         <Schooling />
+        <div style={{display: "flex"}}>
+          <Language />
+          <Language />
+        </div>
     </section>
   )
 }
