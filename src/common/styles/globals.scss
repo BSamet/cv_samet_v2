@@ -36,6 +36,9 @@ body {
   #submit, .card-text-little, span{
     font-size:clamp(0.8rem, 0.7769rem + 0.1026vw, 0.9rem)
   }
+  em {
+    font-size: clamp(0.7rem, 0.6538rem + 0.2051vw, 0.9rem);
+  }
   .progressvalue {
     font-size:clamp(0.6rem, 0.5538rem + 0.2051vw, 0.8rem)
   }
