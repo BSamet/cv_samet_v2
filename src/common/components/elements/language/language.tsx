@@ -26,15 +26,15 @@ const Language = () => {
     return (
         <section className={styles.language}>
             <div className={styles.language__header}>
-                <h1>Formations</h1>
+                <h1>Langues</h1>
             </div>
             <Divider className={styles.language__divider} variant="middle"/>
             <div className={styles.language__description}>
                 {languageData.map((language, index) => (
                     <div key={index}>
-                        <p>{language.language} :</p>
-                        <LinearProgress variant="determinate" value={language.level} />
-                        <span className={styles.language__description__level}>{language.level}%</span>
+                        <p><b>{language.language} :</b></p>
+                        <LinearProgress className={styles.language__description__progressbar} variant="determinate" value={language.level} />
+                        <span className={styles.language__description__level}><b>{language.level}%</b></span>
                     </div>
                 ))}
             </div>

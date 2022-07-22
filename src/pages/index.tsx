@@ -5,6 +5,7 @@ import AboutMe from "../common/components/elements/aboutMe/aboutMe";
 import WorkExperiences from "../common/components/elements/workExperiences/workExperiences";
 import Schooling from "../common/components/elements/schooling/schooling";
 import Language from "../common/components/elements/language/language";
+import StrongPoint from "../common/components/elements/strongPoint/strongPoint";
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
         <Schooling />
         <div style={{display: "flex"}}>
           <Language />
-          <Language />
+          <StrongPoint />
         </div>
     </section>
   )
