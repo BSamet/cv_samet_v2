@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from "../../../styles/Home.module.scss";
 import {Divider} from "@mui/material";
-import Chip from '@mui/material/Chip';
 
 export const strongPointData = [
     {

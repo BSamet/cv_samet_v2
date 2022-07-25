@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from "../../../styles/Home.module.scss";
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,45 +12,48 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
-import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
-import SportsIcon from '@mui/icons-material/Sports';
+import LogoDevIcon from '@mui/icons-material/LogoDev';
+import BackupTableIcon from '@mui/icons-material/BackupTable';
+import InterestsIcon from '@mui/icons-material/Interests';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import MenuIcon from '@mui/icons-material/Menu';
 import {Divider} from "@mui/material";
+import {useRouter} from "next/router";
 
 export const navbarData = [
     {
         title: "Accueil",
         icon: HomeIcon,
+        link: "/"
     },
     {
         title: "Compétences professionnelles",
-        icon: KeyboardDoubleArrowUpIcon,
+        icon: LogoDevIcon,
+        link: "/skills"
     },
     {
         title: "Portfolio",
-        icon: HistoryEduIcon,
+        icon: BackupTableIcon,
+        link: "/portfolio"
     },
     {
         title: "Centres d'intérêt",
-        icon: SportsIcon,
+        icon: InterestsIcon,
+        link: "/interests"
     },
     {
         title: "Contact",
         icon: ContactsIcon,
+        link: "/contact"
     },
 ]
 
 const Navbar = () => {
-    const [navLocation, setNavLocation] = useState('Accueil');
+    const router = useRouter();
+    const pagesPath = router.asPath
     const [state, setState] = React.useState({
         bottom: false,
     });
-
-    function setNavigation(title: string) {
-        setNavLocation(title)
-    }
 
     const toggleDrawer = (anchor: string, open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
         if (
@@ -75,18 +78,19 @@ const Navbar = () => {
                 {navbarData.map((pages, index) => (
                     <div key={index}>
                         <ListItem disablePadding>
-                            <ListItemButton
-                                onClick={() => setNavigation(pages.title)}
-                                sx={pages.title === navLocation ? {color: "#ffffff"} : {color: "#999999"}}
-                                className={styles.navbar__navDrawer__button}
-                            >
-                                <ListItemIcon>
-                                    <pages.icon className={styles.navbar__navDrawer__buttonIcon}/>
-                                </ListItemIcon>
-                                <ListItemText primary={pages.title}/>
-                            </ListItemButton>
+                            <Link href={pages.link} style={{ textDecoration: 'none' }}>
+                                <ListItemButton
+                                    sx={pages.link === pagesPath ? {color: "#ffffff"} : {color: "#999999"}}
+                                    className={styles.navbar__navDrawer__button}
+                                >
+                                    <ListItemIcon>
+                                        <pages.icon className={styles.navbar__navDrawer__buttonIcon}/>
+                                    </ListItemIcon>
+                                    <ListItemText primary={pages.title}/>
+                                </ListItemButton>
+                            </Link>
                         </ListItem>
-                        <Divider style={{ background: 'white' }} variant="middle"/>
+                        <Divider style={{background: 'white'}} variant="middle"/>
                     </div>
                 ))}
             </List>
@@ -102,14 +106,14 @@ const Navbar = () => {
             <Toolbar className={styles.navbar__normalNav}>
                 <nav className={styles.navbar__nav}>
                     {navbarData.map((nav, index) => (
-                            <Link
-                                key={index}
-                                className={styles.navbar__button}
-                                onClick={() => setNavigation(nav.title)}
-                                sx={nav.title === navLocation ? {color: "#ffffff"} : {color: "#999999"}}
-                            >
-                                {nav.title}
-                            </Link>
+                        <Link
+                            key={index}
+                            className={styles.navbar__button}
+                            sx={nav.link === pagesPath ? {color: "#ffffff"} : {color: "#999999"}}
+                            href={nav.link}
+                        >
+                            {nav.title}
+                        </Link>
                     ))}
                 </nav>
             </Toolbar>

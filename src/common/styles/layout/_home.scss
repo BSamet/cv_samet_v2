@@ -1,0 +1,6 @@
+.home__languageAndStrongPointSection {
+  display: flex;
+  @include tablet-only {
+    flex-direction: column;
+  }
+}

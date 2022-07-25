@@ -23,6 +23,7 @@
       border-radius: 10px;
       span {
         text-transform: uppercase;
+        font-size:clamp(0.9rem, 0.8308rem + 0.3077vw, 1.2rem)
       }
       &:hover{
         background-color: darken($primaryColor, 10%);

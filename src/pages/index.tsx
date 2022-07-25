@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import React from "react";
+import styles from "../common/styles/Home.module.scss";
 import AboutMe from "../common/components/elements/aboutMe/aboutMe";
 import WorkExperiences from "../common/components/elements/workExperiences/workExperiences";
 import Schooling from "../common/components/elements/schooling/schooling";
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
         <AboutMe />
         <WorkExperiences />
         <Schooling />
-        <div style={{display: "flex"}}>
+        <div className={styles.home__languageAndStrongPointSection}>
           <Language />
           <StrongPoint />
         </div>
