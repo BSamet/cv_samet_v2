@@ -1,0 +1,21 @@
+.devSkills {
+  display: flex;
+  @include baseComponent;
+  &__header {
+    @include colorTitle;
+  }
+  &__divider {
+    @include divider;
+  }
+  &__description {
+    margin-top: 1%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    &__list {
+      align-items: self-start;
+    }
+  }
+}
