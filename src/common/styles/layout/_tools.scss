@@ -1,0 +1,26 @@
+.tools {
+  display: flex;
+  @include baseComponent;
+
+  &__header {
+    @include colorTitle;
+  }
+
+  &__divider {
+    @include divider;
+  }
+
+  &__description {
+    &__card {
+      width: 150px;
+      height: 150px;
+
+      &__image {
+        width: 5.5vw;
+        max-width: 200px;
+        min-width: 50px;
+        height: auto;
+      }
+    }
+  }
+}
