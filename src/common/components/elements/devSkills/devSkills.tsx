@@ -120,28 +120,26 @@ const DevSkills = () => {
             <Divider className={styles.devSkills__divider} variant="middle"/>
             <div className={styles.devSkills__description}>
                 {devSkillsData.sort((a, b) => b.level - a.level).map((devSkill, index) => (
-                    <Paper elevation={3}>
-                        <ListItem key={index} className={styles.devSkills__description__list}>
+                    <Paper key={index} elevation={3}>
+                        <ListItem className={styles.devSkills__description__header}>
                             <ListItemAvatar>
                                 <h6>{devSkill.language}</h6>
                             </ListItemAvatar>
-                            {/*TODO Error here*/}
                             <ListItemText
                                 primary={
                                     <React.Fragment>
                                         <Rating name="half-rating-read" defaultValue={devSkill.level} precision={0.5}
                                                 readOnly size="large" style={{marginLeft: "2%"}}/>
                                     </React.Fragment>}
-                                secondary={
-                                    <div style={{display: "flex", flexWrap: "wrap"}}>
-                                        {devSkill.framework.map((framework, index) => (
-                                            <Chip key={index} style={{backgroundColor: devSkill.color, color: "white", margin: 2}}
-                                                  label={framework.title}/>
-                                        ))}
-                                    </div>
-                                }
                             />
                         </ListItem>
+                        <div className={styles.devSkills__description__chip} style={{display: "flex", flexWrap: "wrap"}}>
+                            {devSkill.framework.map((framework, index) => (
+                                <span key={index} style={{backgroundColor: devSkill.color, color: "white", margin: 2}}>
+                                    {framework.title}
+                                </span>
+                            ))}
+                        </div>
                     </Paper>
                 ))}
             </div>
