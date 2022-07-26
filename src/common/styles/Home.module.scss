@@ -4,6 +4,7 @@
 @import "base/base";
 @import "base/typographie";
 
+// Home pages
 @import "layout/header";
 @import "layout/navbar";
 @import "layout/home";
@@ -12,4 +13,7 @@
 @import "layout/schooling";
 @import "layout/language";
 @import "layout/strongPoint";
+
+// skills pages
 @import "layout/devSkills";
+@import "layout/ability";
