@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from "../../../styles/Home.module.scss";
-import {Chip, Divider, ListItem, ListItemAvatar, ListItemText, Paper, Rating} from "@mui/material";
+import {Divider, ListItem, ListItemAvatar, ListItemText, Paper, Rating} from "@mui/material";
 
 export const devSkillsData = [
     {
@@ -48,7 +48,7 @@ export const devSkillsData = [
         color: "#92959d"
     },
     {
-        language: "Javascript",
+        language: "Javascript/Typescript",
         framework: [
             {
                 title: "Angular",
@@ -67,6 +67,12 @@ export const devSkillsData = [
             },
             {
                 title: "NextJs",
+            },
+            {
+                title: "ThreeJs",
+            },
+            {
+                title: "Jest",
             },
             {
                 title: "NodeJs",
@@ -133,7 +139,8 @@ const DevSkills = () => {
                                     </React.Fragment>}
                             />
                         </ListItem>
-                        <div className={styles.devSkills__description__chip} style={{display: "flex", flexWrap: "wrap"}}>
+                        <div className={styles.devSkills__description__chip}
+                             style={{display: "flex", flexWrap: "wrap"}}>
                             {devSkill.framework.map((framework, index) => (
                                 <span key={index} style={{backgroundColor: devSkill.color, color: "white", margin: 2}}>
                                     {framework.title}

@@ -72,26 +72,32 @@
   }
 
   &__description {
+    min-height: 250px;
     background-color: rgba(0, 0, 0, .25);
     padding: 2% 0;
     width: 90%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     &__block {
       width: 33%;
+
       img {
         width: 4.5vw;
         max-width: 70px;
         min-width: 50px;
         height: auto;
       }
+
       &__frontEnd:hover {
         animation: jello-horizontal 0.9s infinite both;
       }
+
       &__backEnd:hover {
         animation: rotate-center 0.6s ease-in-out infinite both;
       }
+
       &__responsive:hover {
         animation: scale-down-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
       }
