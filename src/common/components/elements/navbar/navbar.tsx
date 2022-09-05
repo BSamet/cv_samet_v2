@@ -78,7 +78,7 @@ const Navbar = () => {
                 {navbarData.map((pages, index) => (
                     <div key={index}>
                         <ListItem disablePadding>
-                            <Link href={pages.link} style={{ textDecoration: 'none' }}>
+                            <Link href={pages.link} style={{textDecoration: 'none'}}>
                                 <ListItemButton
                                     sx={pages.link === pagesPath ? {color: "#ffffff"} : {color: "#999999"}}
                                     className={styles.navbar__navDrawer__button}

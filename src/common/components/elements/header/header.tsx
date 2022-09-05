@@ -5,6 +5,7 @@ import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import Avatar from '@mui/material/Avatar';
 import Navbar from "../navbar/navbar";
+import ProfilePicture from '../../../assets/picture/samet_carré.jpg';
 
 const Header = () => {
     return (
@@ -23,7 +24,7 @@ const Header = () => {
                 <div className={styles.headerSection__mainHeader}>
                     <Avatar
                         alt="SAMET BULUT"
-                        src="https://sametbulut.fr/image/picture/samet_miniature.jpg"
+                        src={ProfilePicture.src}
                         className={styles.headerSection__mainHeader__images}
                     />
                     <h1>SAMET BULUT</h1>
