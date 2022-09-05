@@ -33,7 +33,7 @@ const StrongPoint = () => {
             <Divider className={styles.strongPoint__divider} variant="middle"/>
             <ul className={styles.strongPoint__description}>
                 {strongPointData.map((strongPoint, index) => (
-                    <li><b>{strongPoint.point}</b></li>
+                    <li key={index}><b>{strongPoint.point}</b></li>
                 ))}
             </ul>
         </section>

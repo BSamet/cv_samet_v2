@@ -1,0 +1,21 @@
+.tools {
+  display: flex;
+  @include baseComponent;
+
+  &__header {
+    @include colorTitle;
+  }
+
+  &__divider {
+    @include divider;
+  }
+
+  &__description {
+    margin-top: 1%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+}

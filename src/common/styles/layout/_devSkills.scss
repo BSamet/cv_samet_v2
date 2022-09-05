@@ -1,0 +1,33 @@
+.devSkills {
+  display: flex;
+  @include baseComponent;
+  &__header {
+    @include colorTitle;
+  }
+  &__divider {
+    @include divider;
+  }
+  &__description {
+    margin-top: 1%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    >div {
+      padding: 1%;
+    }
+    &__header {
+      align-items: self-start;
+    }
+    &__chip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        padding: 0.5rem 1rem;
+        border-radius: 15px;
+      }
+    }
+  }
+}
