@@ -54,6 +54,7 @@ const Works = () => {
                             component="img"
                             height="250"
                             image={work.image.src}
+                            title={work.title}
                             alt={work.title}
                         />
                         <CardContent className={styles.works__description__card}>
@@ -72,7 +73,7 @@ const Works = () => {
                                 <Divider sx={{marginTop: 3}} variant="middle"/>
                                 <div>
                                     <h6>GitHub</h6>
-                                    <p><a href={work.link} target={"_blank"}>{work.title}</a></p>
+                                    <p><a href={work.link} target={"_blank"} rel="noreferrer">{work.title}</a></p>
                                 </div>
                             </div>
                         </CardContent>

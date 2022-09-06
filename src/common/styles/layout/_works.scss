@@ -18,14 +18,19 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-
+    h3 {
+      color: $primaryColor;
+    }
     &__cardDetails {
-
       div {
         margin-top: 5%;
-
         h6 {
           margin-bottom: 3%;
+        }
+        a {
+          text-decoration: none;
+          color: $primaryColor;
+          font-weight: bold;
         }
       }
     }
