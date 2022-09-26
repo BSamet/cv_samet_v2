@@ -33,7 +33,7 @@ export const worksData = [
     {
         title: "Ebn",
         image: Ebn,
-        detail: "Mise en place d'une application web et mobile d'optimisation de la collecte les biodéchets de la ville de Mulhouse, particuliers ou professionnels.",
+        detail: "Mise en place d'une application web et mobile d'optimisation de la collecte des biodéchets de la ville de Mulhouse, particuliers ou professionnels.",
         technologies: ["ReactJS", "ReactNative", "NestJs", "TypeScript", "Sass", "MySql", "Docker", "Swagger", "Git"],
         link: "https://github.com/BSamet/ebn"
     },
